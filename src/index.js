@@ -1,5 +1,5 @@
-import React, {Component} from "react";
-import {render} from "react-dom";
+import React, { Component } from "react";
+import { render } from "react-dom";
 import WebFont from "webfontloader";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
@@ -10,16 +10,16 @@ class App extends Component {
         super({});
         this.state = {
             scale: 1,
-            name: "School Name Below"
+            name: "Powered by google_logo Developers"
         };
     }
 
     componentDidMount() {
         WebFont.load({
             google: {
-                families: ["Roboto:400", "Product Sans", "Product Sans:400"]
+                families: ["Roboto:400", "Product Sans", "Product Sans:400", "Google Sans", "Google Sans:400"]
             },
-            fontactive: (familyName, fvd)=>{
+            fontactive: (familyName, fvd) => {
                 this.drawImage()
             }
         });
@@ -41,7 +41,8 @@ class App extends Component {
                         alt={`DSC Icon`}
                     />
                 </div>
-                <p>Start editing to see some magic happen :)</p>
+                <p>Start editing to see some magic happen :) <br />
+                    Dimensions: {this.state.width} x {this.state.height} &nbsp; Scale: {this.state.scale}</p>
                 {this.renderScaleButton()}
                 <TextField
                     label="University"
@@ -57,7 +58,7 @@ class App extends Component {
                         );
                     }}
                 />
-                <br/>
+                <br />
                 <canvas
                     style={hidden}
                     ref={e => {
@@ -83,11 +84,14 @@ class App extends Component {
                 </Button>
                 <footer>
                     Made with <span role="img" aria-label="love">❤️ </span> by <a
-                    href="https://twitter.com/shanggyilim">@shanggyilim</a> • <a
-                    href="https://github.com/shangyilim/dsc-logo-generator">GitHub</a>
+                        href="https://twitter.com/shanggyilim">@shanggyilim</a> • <a
+                            href="https://github.com/shangyilim/dsc-logo-generator">GitHub</a>
                     &nbsp;• Modified also with <span role="img" aria-label="love">❤️ </span>by <a
-                    href="https://github.com/simonpham">@simonpham</a>. <a
-                    href="https://github.com/DSC-Ton-Duc-Thang-University/dsc-logo-generator">GitHub</a>
+                        href="https://github.com/simonpham">@simonpham</a>. <a
+                            href="https://github.com/DSC-Ton-Duc-Thang-University/dsc-logo-generator">GitHub</a>
+                    &nbsp;• Fixed with much more <span role="img" aria-label="love">❤️ </span>by <a
+                        href="https://github.com/varungupta3009">@varungupta3009</a>. <a
+                            href="https://github.com/varungupta3009/dsc-logo-generator">GitHub</a>
                 </footer>
             </div>
         );
@@ -105,9 +109,14 @@ class App extends Component {
         this.logoCanvas.setAttribute("width", canvasWidth * scale);
         this.logoCanvas.setAttribute("height", canvasHeight * scale);
 
+        this.setState({
+            width: Math.round(canvasWidth * scale),
+            height: Math.round(canvasHeight * scale)
+        });
+
         ctx.scale(scale, scale);
         ctx.font = `400 94px "Product Sans"`;
-        ctx.fillStyle = "rgba(0, 0, 0, 0.54)";
+        ctx.fillStyle = "rgb(103, 108, 114)"; // Google (GD and DSC) Brand Palette's Primary Text Color
 
         ctx.drawImage(this.dscLogo, 20, 0, this.dscLogo.width, this.dscLogo.height);
 
@@ -164,4 +173,4 @@ const hidden = {
     display: "none"
 };
 
-render(<App/>, document.getElementById("root"));
+render(<App />, document.getElementById("root"));

@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/dsc-logo-generator/static/css/main.d578d95f.chunk.css",
+    "main.js": "/dsc-logo-generator/static/js/main.15c1ecb6.chunk.js",
+    "main.js.map": "/dsc-logo-generator/static/js/main.15c1ecb6.chunk.js.map",
+    "runtime-main.js": "/dsc-logo-generator/static/js/runtime-main.1ca663f7.js",
+    "runtime-main.js.map": "/dsc-logo-generator/static/js/runtime-main.1ca663f7.js.map",
+    "static/js/2.7c256ad3.chunk.js": "/dsc-logo-generator/static/js/2.7c256ad3.chunk.js",
+    "static/js/2.7c256ad3.chunk.js.map": "/dsc-logo-generator/static/js/2.7c256ad3.chunk.js.map",
+    "index.html": "/dsc-logo-generator/index.html",
+    "precache-manifest.9d524ebe6bf4c0cc2d6298e775691d77.js": "/dsc-logo-generator/precache-manifest.9d524ebe6bf4c0cc2d6298e775691d77.js",
+    "service-worker.js": "/dsc-logo-generator/service-worker.js",
+    "static/css/main.d578d95f.chunk.css.map": "/dsc-logo-generator/static/css/main.d578d95f.chunk.css.map"
+  }
+}

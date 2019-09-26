@@ -2,8 +2,10 @@
   "name": "react",
   "version": "0.0.0",
   "private": true,
+  "homepage": "https://varungupta3009.github.io/dsc-logo-generator",
   "dependencies": {
     "@material-ui/core": "^4.4.0",
+    "gh-pages": "^2.1.1",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "webfontloader": "^1.6.28"
@@ -11,6 +13,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
